@@ -21,6 +21,6 @@
 /misc           emmc   /dev/block/platform/13500000.dwmmc0/by-name/misc          flags=display="Misc"
 /cache          ext4   /dev/block/platform/13500000.dwmmc0/by-name/cache         flags=display="Cache"
 
-/external_sd    vfat   /dev/block/mmcblk1p1 /dev/block/mmcblk0                flags=display="Micro SDcard";storage;wipeingui;removable
-/usb-otg        vfat   /dev/block/sdf1 /dev/block/sdf                         flags=display="USB-OTG";storage;wipeingui;removable
+/external_sd    vfat   /devices/platform/13550000.dwmmc2/mmc_host/mmc1*                flags=display="Micro SDcard";storage;wipeingui;removable
+/usb-otg        vfat   /devices/platform/13600000.usb/13600000.dwc3*                         flags=display="USB-OTG";storage;wipeingui;removable
 
