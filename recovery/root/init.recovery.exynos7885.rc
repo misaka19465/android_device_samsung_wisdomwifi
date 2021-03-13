@@ -1,0 +1,8 @@
+on init
+    export ANDROID_ROOT /system_root
+    write /proc/sys/kernel/hung_task_timeout_secs 0
+
+on boot
+    setprop ro.boot.vbmeta.avb_version 1.1
+    setprop ro.boot.avb_version 1.1
+

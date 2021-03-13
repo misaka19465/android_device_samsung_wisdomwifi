@@ -1,0 +1,26 @@
+# Android fstab file.
+
+# mount point  fstype device                                   device2              flags
+/system_root    ext4   /dev/block/platform/13500000.dwmmc0/by-name/system        flags=backup=0;display="System"
+/vendor         ext4   /dev/block/platform/13500000.dwmmc0/by-name/vendor        flags=backup=0;display="Vendor";wipeingui
+/product        ext4   /dev/block/platform/13500000.dwmmc0/by-name/product       flags=backup=0;display="Product";wipeingui
+
+/boot           emmc   /dev/block/platform/13500000.dwmmc0/by-name/boot
+/recovery       emmc   /dev/block/platform/13500000.dwmmc0/by-name/recovery      flags=backup=1
+
+/system_image   emmc   /dev/block/platform/13500000.dwmmc0/by-name/system        flags=backup=1
+/vendor_image   emmc   /dev/block/platform/13500000.dwmmc0/by-name/vendor        flags=backup=1
+/product_image  emmc   /dev/block/platform/13500000.dwmmc0/by-name/product       flags=backup=1;flashimg;display="Product Image"
+
+/data           ext4   /dev/block/platform/13500000.dwmmc0/by-name/userdata      flags=encryptable=footer;length=-20480
+
+/dtb            emmc   /dev/block/platform/13500000.dwmmc0/by-name/dtb           flags=backup=1;display="DTB"
+/dtbo           emmc   /dev/block/platform/13500000.dwmmc0/by-name/dtbo          flags=backup=1;display="DTBO"
+/modem          emmc   /dev/block/platform/13500000.dwmmc0/by-name/radio         flags=backup=1;display="Baseband"
+/efs            ext4   /dev/block/platform/13500000.dwmmc0/by-name/sec_efs           flags=backup=1;display="EFS"
+/misc           emmc   /dev/block/platform/13500000.dwmmc0/by-name/misc          flags=display="Misc"
+/cache          ext4   /dev/block/platform/13500000.dwmmc0/by-name/cache         flags=display="Cache"
+
+/external_sd    vfat   /dev/block/mmcblk1p1 /dev/block/mmcblk0                flags=display="Micro SDcard";storage;wipeingui;removable
+/usb-otg        vfat   /dev/block/sdf1 /dev/block/sdf                         flags=display="USB-OTG";storage;wipeingui;removable
+
