@@ -14,4 +14,4 @@
 # limitations under the License.
 #
 
-add_lunch_combo omni_wisdomwifi-eng
+COMMON_LUNCH_CHOICES=omni_wisdomwifi-eng
